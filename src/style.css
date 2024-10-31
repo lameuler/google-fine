@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://ler.quest/assets/_fonts/lexend-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url(https://ler.quest/assets/_fonts/lexend-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url(/_fonts/fira-code.woff2) format('woff2');
+}
+html, body {
+    min-height: fit-content;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Lexend', system-ui, 'Helvetica Neue', sans-serif;
+    color: #111111;
+}
+body {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+}
+main {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
+}
+#value {
+    font-family: 'Fira Code', ui-monospace, monospace;
+    font-size: 1.5rem;
+    overflow-wrap: anywhere;
+}
+#display {
+    font-size: 1.3rem;
+}
+h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.selector {
+    display: flex;
+    padding: 0.2rem;
+    background-color: #eaeaea;
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+}
+input {
+    appearance: none;
+    display: none;
+}
+label {
+    padding: 0.2rem 0.7rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+label:hover {
+    background-color: #b9b9b969;
+}
+input:checked + label {
+    font-weight: 600;
+    background-color: #b9b9b9cd;
+}
+.indicator {
+    margin: 0.4rem;
+}
+.indicator .paused, body.paused .indicator .live {
+    display: none;
+}
+.indicator .live, body.paused .indicator .paused {
+    display: block;
+}
+.indicator span {
+    border-radius: 1rem;
+    padding: 0.2rem 0.7rem;
+    font-weight: 500;
+    position: relative;
+    padding-inline-start: 1.6rem;
+}
+.indicator span::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0.6rem;
+    translate: 0 -50%;
+}
+.indicator .live span {
+    background-color: #ffd0d7;
+}
+.indicator .live span::before {
+    background-color: #ff0022;
+    box-shadow: 0 0 0.3rem 0.1rem #e9001fb4;
+}
+.indicator .paused span {
+    background-color: #dfdfdf;
+}
+.indicator .paused span::before {
+    background-color: #8a8a8a;
+    box-shadow: 0 0 0.3rem 0.1rem #767676b4;
+}
+.indicator button {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #0062ff;
+}
+.indicator button:hover {
+    text-decoration: underline;
+}
+header {
+    color: #888888;
+}
+header a {
+    text-decoration: none;
+}
+header a:hover {
+    text-decoration: underline;
+}
+footer {
+    color: #888888;
+}
+a {
+    color: inherit;
+}

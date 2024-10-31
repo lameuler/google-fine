@@ -1,0 +1,18 @@
+{
+    "name": "google-fine",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@types/big.js": "^6.2.2",
+        "vite": "^5.4.10"
+    },
+    "dependencies": {
+        "big.js": "^6.2.2"
+    }
+}

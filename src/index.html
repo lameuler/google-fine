@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google's Growing Russia Fine - Live Estimate</title>
+    <meta name="description" content="Live estimate of the growth of Google's fine from Russia of 2 undecillion rubles (20 decillion dollars)">
+    <link rel="preload" href="https://ler.quest/assets/_fonts/lexend-latin.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="https://ler.quest/assets/_fonts/lexend-latin-ext.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/_fonts/fira-code.woff2" as="font"/>
+    <link rel="preload" href="https://latest.currency-api.pages.dev/v1/currencies/rub.min.json" as="fetch" crossorigin="anonymous" />
+    <script type="module" src="./script.ts"></script>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <header>
+        <a href="https://ler.quest/google-fine/">ler.quest/google-fine/</a>
+    </header>
+    <main>
+        <h1>How much does Google owe Russia?</h1>
+        <div class="indicator">
+            <div class="live">
+                <span>Live estimate</span>
+                <button id="pause">pause</button>
+            </div>
+            <div class="paused">
+                <span>Paused</span>
+                <button id="resume">resume</button>
+            </div>
+        </div>
+        <code id="value">loading...</code>
+        <div id="display"></div>
+        <div class="selector">
+            <input id="ruble" type="radio" name="currency" checked/>
+            <label for="ruble">Ruble &#x20BD;</label>
+            <input id="usd" type="radio" name="currency"/>
+            <label for="usd">USD $</label>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 <a href="https://eu.ler.sg">lam eu ler</a> – <a href="https://github.com/lameuler/google-fine">view on github</a>
+    </footer>
+</body>
+</html>
