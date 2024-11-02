@@ -49,11 +49,10 @@ async function run() {
         for (let i = str.length; i > 0; i-=3) {
             parts.unshift(str.substring(i-3, i))
         }
-        const symbol = usd ? '$ ' : '\u20BD '
         const roundorder = Math.floor(str.length/3)*3
         const suffix = ' ' + SUFFIXES[roundorder/3] + (usd ? ' dollars' : ' rubles')
 
-        const valueText = symbol+parts.join(',\u200B')
+        const valueText = usd ? '$ ' + parts.join(',\u200B') : parts.join(',\u200B') + ' \u20BD'
         if (!paused || valueElement.innerText !== valueText) {
             valueElement.innerText = valueText
         }
