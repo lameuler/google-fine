@@ -53,9 +53,9 @@ main {
     font-size: 1.3rem;
 }
 h1 {
-    margin: 0;
+    margin: 0 0 0.5rem 0 0;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 .selector {
     display: flex;
@@ -133,6 +133,11 @@ input:checked + label {
 }
 .indicator button:hover {
     text-decoration: underline;
+}
+p {
+    color: #4f4f4f;
+    max-width: 40rem;
+    margin: 0;
 }
 header {
     color: #888888;
