@@ -49,7 +49,7 @@ async function run() {
         for (let i = str.length; i > 0; i-=3) {
             parts.unshift(str.substring(i-3, i))
         }
-        const roundorder = Math.floor(str.length/3)*3
+        const roundorder = Math.floor((str.length-1)/3)*3
         const suffix = ' ' + SUFFIXES[roundorder/3] + (usd ? ' dollars' : ' rubles')
 
         const valueText = usd ? '$ ' + parts.join(',\u200B') : parts.join(',\u200B') + ' \u20BD'
