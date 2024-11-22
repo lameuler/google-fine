@@ -7,7 +7,9 @@ function calc(d?: number) {
     return Big(2).pow(rounded).times(2**(exp-rounded)).times(700_000)
 }
 
-const SUFFIXES = ['', 'thousand', 'million', 'billion', 'trillion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion', 'decillion', 'undecillion', 'duodecillion', 'tredecillion', 'quattuordecillion', 'quindecillion', 'sexdecillion', 'septendecillion', 'octodecillion', 'novemdecillion', 'vigintillion', 'unvigintillion', 'duovigintillion', 'trevigintillion', 'quattuorvigintillion', 'quinvigintillion', 'sexvigintillion', 'septenvigintillion', 'octovigintillion', 'novemvigintillion', 'trigintillion']
+const SUFFIXES = [
+    '', 'thousand', 'm-', 'b-', 'tr-', 'quadr-', 'quint-', 'sext-', 'sept-', 'oct-', 'non-', 'dec-', 'undec-', 'duodec-', 'tredec-', 'quattuordec-', 'quindec-', 'sexdec-', 'septendec-', 'octodec-', 'novemdec-', 'vigint-', 'unvigint-', 'duovigint-', 'trevigint-', 'quattuorvigint-', 'quinvigint-', 'sexvigint-', 'septenvigint-', 'octovigint-', 'novemvigint-', 'trigint-'
+].map((suffix) => suffix.replace('-', 'illion'))
 
 async function fetchRate() {
     let rate = 0.010279969
